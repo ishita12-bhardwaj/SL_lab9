@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Calculator</title>
+ <meta charset="UTF-8">
+ </head>
+ <body>
+ <div id="bg">
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+</mat-toolbar>
+
+ <h3>First Number:{{num1}}</h3>
+ <h3>Second Number:{{num2}}</h3>
+ <br>
+ <div id="bu">
+ <button (click)="add()" id="a">Addition of two numbers</button>
+ <button (click)="sub()" id="b">Subtraction of two numbers</button>
+ <button (click)="mul()" id="c">Multiplication of two numbers</button>
+ <button (click)="divi()" id="d">Division of two numbers</button>
+ <button (click)="modu()" id="e">Modulus</button>
+
+ </div>
+ <div id="dis">
+ <h4 *ngIf="check==0">Sum is {{sum}}</h4>
+ <h4 *ngIf="check==1">Difference is {{dif}}</h4>
+ <h4 *ngIf="check==2">Product is {{mult}}</h4>
+ <h4 *ngIf="check==3">Quotient is {{quo}}</h4>
+ <h4 *ngIf="check==4">Remainder is {{modulo}}</h4>
+
+ </div>
+ </div>
+ <mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>
+
+<section>
+  <div class="example-label">Raised</div>
+  <div class="example-button-row">
+
+    <button mat-raised-button color="accent">Button to go to google.com</button>
+    <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+  </div>
+</section>
+
+ </body>
+</html>
+
+
